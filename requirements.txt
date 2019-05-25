@@ -1,0 +1,7 @@
+# Install all the dependancies in setup.py
+# the modules are in 'install_requires'
+# done with the magic command '-e .'
+
+
+# The Amazing Command from pwntools
+-e .
