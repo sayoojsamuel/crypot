@@ -8,6 +8,6 @@ This module is crafted to suit the needs of both cryptographers and CTFers, and 
     - blah,
 """
 
-#FIXME: see why not accessible in setup.py
 __version__ = "0.0.1"
 __license__ = "MIT"
+
