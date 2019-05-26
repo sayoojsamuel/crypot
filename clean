@@ -1,0 +1,9 @@
+#!/bin/bash
+#TODO: Make a clean code
+if [ `find . -name "*.pyc"` ]
+then
+    echo "[x] Deleting:"; find . -name "*.pyc" -type f -print -delete | cat; printf "\n[>] Done cleaning!\n"
+else
+    echo "[!] Nothing to clean!"
+fi
+
