@@ -9,7 +9,7 @@ help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo "		clean-pyc		to remove the object files"
 	@echo "		test			to pyTest the unittest"
-	@echo "		git				m="commit message"; add *, commit with m and push
+	@echo "		git			m='commit message'; add *, commit with m and push"
 	@echo "		status			git status"	
 
 clean-pyc:
