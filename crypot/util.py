@@ -47,7 +47,7 @@ def blen(n):
     """
     Length of bin(n)
     """
-    return len(bin(m)[2:])
+    return len(bin(n)[2:])
 
 def ror(s,shift):
     """
