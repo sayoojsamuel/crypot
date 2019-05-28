@@ -5,6 +5,10 @@ Some modules depend heavily on SageMath, unless it is also implemented in python
 
 Some functions and/or exploits will be available with out-of-the-box-tweaks. Please follow the instructions to view and use them.
 
+#TODO: 
+Add PyTest
+Add Makefile
+
 ## Installation
 
 > sudo python setup.py install
