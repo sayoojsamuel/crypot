@@ -75,6 +75,30 @@ def partialPrimes():
     """
     raise NotImplementedError
 
+def multiprime():
+    """
+    handle multiprime rsa
+    """
+    raise NotImplementedError
+
+def chosenplaintext():
+    """
+    CPA on RSA
+    """
+    raise NotImplementedError
+
+
+def yafu():
+    """
+    API call to yafu
+    """
+    raise NotImplementedError
+
+def neca():
+    """
+    API call to neca
+    """
+    raise NotImplementedError
 
 
 
@@ -90,6 +114,19 @@ def fermat():
     fermat factorisation
     """
     raise NotImplementedError
+    
+def pollard():
+    """
+    pollard p-1 for relatively smooth numbers
+    """
+    raise NotImplementedError
+
+def mersenne():
+    """
+    mersenne primes factorisation
+    """
+    raise NotImplementedError
+    
 
 def londahl():
     """
