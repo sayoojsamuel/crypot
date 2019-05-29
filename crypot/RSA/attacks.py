@@ -126,7 +126,6 @@ def mersenne():
     mersenne primes factorisation
     """
     raise NotImplementedError
-    
 
 def londahl():
     """
