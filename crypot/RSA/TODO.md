@@ -10,6 +10,8 @@ copper/wiener/LLL
 Redacted
 conversions between formats
 
+close primes: https://grocid.net/2017/09/16/finding-close-prime-factorizations/
+franklin reiter: f2 = (m*X + r)^e -c2
 
 Padding oracle attacks in RSA
 http://secgroup.dais.unive.it/wp-content/uploads/2012/11/Practical-Padding-Oracle-Attacks-on-RSA.html

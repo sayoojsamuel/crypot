@@ -13,10 +13,10 @@ def wiener_variant():
     """
     raise NotImplementedError
 
-  
+
 def bleichenbacher():
     """
-    Used for padding oracle (with PKCS#1 v1.5), returning padding error 
+    Used for padding oracle (with PKCS#1 v1.5), returning padding error
     """
     raise NotImplementedError
 
@@ -114,7 +114,7 @@ def fermat():
     fermat factorisation
     """
     raise NotImplementedError
-    
+
 def pollard():
     """
     pollard p-1 for relatively smooth numbers
