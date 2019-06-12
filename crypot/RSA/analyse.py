@@ -4,12 +4,15 @@ from Crypto.PublicKey import *
 
 #TODO:
 class RSA:
-    def __init__(self,n,e):
+    def __init__(self,n=None,e=None,c=None):
         self.n = n
         self.e = e
+        self.c = c
 
-    @property
-    def update(d,p,q):
-        pass
+    def update(self,d=None,p=None,q=None):
+        self.d = d
+        self.p = p
+        self.q = q
+
     
     
