@@ -1,3 +1,4 @@
+from sage.all import *
 # https://github.com/ValarDragon/CTF-Crypto/blob/master/RSA/FranklinReiter.sage
 # Franklin-Reiter attack against RSA.
 # If two messages differ only by a known fixed difference between the two messages
@@ -91,3 +92,4 @@ def testFranklinReiter():
     assert recoveredM==m
     print("They are equal!")
     return True
+
