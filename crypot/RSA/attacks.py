@@ -2,17 +2,23 @@
 from Crypto.Util.number import *
 from gmpy2 import *
 
-def wiener():
+def wiener(e,n):
     """
     Used when the d is very small, otherwise e is very large
     """
-    raise NotImplementedError
-
+    from attacks.wiener import wiener
+    
+    d = wiener.crack_rsa(e,n)
+    if d == None:
+        raise Exception("Not suitable for wieners attack")
+    return d
+    
 
 def wiener_variant():
     """
     Used when the d is very small, otherwise e is very large
     """
+
     raise NotImplementedError
 
 
@@ -46,11 +52,18 @@ def invalidPubExponent(c, p,q,e):
         print "This may not be a valid m"
         return m
     
-def recover_modulus(parameter_list):
+def recover_modulus(encrypt,e=None):
     """
     Used to recover modulus, and e if encryption oracle is given
     """
-    raise NotImplementedError
+    from attacks.extractmod import *
+    if type(encrypt)!=function:
+        raise Exception("First argument must be a function to encrypt")
+    if e==None:
+        n = extractmod_eunknown(encrypt)
+    else:
+        n = extractmod_eknown(encrypt,e)
+    return n
 
 def blinding(parameter_list):
     """
@@ -69,13 +82,27 @@ def common_modulus(parameter_list):
     """
     Multiple messages with same modulus
     """
-    raise NotImplementedError
+    from attacks.CMA import CMA
+    try:
+        c1, c2, e1, e2, n = parameter_list
+    except:
+        raise Exception("Give the correct parameter list (c1, c2, e1, e2, n)")
 
-def hastad_broadcast(parameter_list):
+    m = CMA(c1,c2,e1,e2,n)
+    print "Message Found: ",m
+    return m
+
+def hastad_broadcast(ct_list, mod_list):
     """
     Broadcast same message
     """
-    raise NotImplementedError
+    from attacks.Hastad.hashtad import *
+    if len(ct_list)!=len(mod_list):
+        if len(ct_list)!=3:
+            raise Exception("Incorrect Parameteres, Parameters Required (ct_list,mod_list)")
+    m = hastad_unpadded(ct_list,mod_list)
+    print "Message Found: ", m
+    return m
 
 def boneh_durfee(parameter_list):
     """
@@ -126,8 +153,24 @@ def neca():
 def factordb(para):
     """
     Api for factor db call
+
     """
-    raise NotImplementedError
+    import requests
+    try:
+    	a=requests.get("http://factordb.com/api", params={"query": str(p)}).json()
+    	fac = a['factors']
+    	if a["id"]=='C':
+            return 0
+    	for i in range(len(fac)):
+            fac[i][0]=int(fac[i][0])
+        k=[]
+        for i in fac:
+            k+=[i[0]]*i[1]
+        return k
+    except:
+    	print "No Internet Connection"
+    	return None
+ 
 
 def fermat():
     """
