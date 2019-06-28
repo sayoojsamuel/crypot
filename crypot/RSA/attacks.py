@@ -1,4 +1,6 @@
 # Attack Symmary
+from Crypto.Util.number import *
+from gmpy2 import *
 
 def wiener():
     """
@@ -26,6 +28,24 @@ def coppersmiths(parameter_list):
     """
     raise NotImplementedError
 
+def invalidPubExponent(c, p,q,e):
+    """
+    Used when gcd(e,phi)!=1
+    """
+    phi = (p-1)*(q-1)
+    n = p*q
+    _gcd = gcd(e,phi)
+    if (_gcd==1):
+        raise Exception("This is a valid public key")
+    d = invert(e//_gcd,phi)
+    c = pow(c,d,n)
+    m,check = iroot(c,_gcd)
+    if check == True:
+        return m
+    else:
+        print "This may not be a valid m"
+        return m
+    
 def recover_modulus(parameter_list):
     """
     Used to recover modulus, and e if encryption oracle is given
