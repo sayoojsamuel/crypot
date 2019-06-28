@@ -56,7 +56,7 @@ def recover_modulus(encrypt,e=None):
     """
     Used to recover modulus, and e if encryption oracle is given
     """
-    from attacks.extractmod import *
+    from attacks.extractmod import extractmod_eunknown,extractmod_eknown
     if type(encrypt)!=function:
         raise Exception("First argument must be a function to encrypt")
     if e==None:
@@ -96,7 +96,7 @@ def hastad_broadcast(ct_list, mod_list):
     """
     Broadcast same message
     """
-    from attacks.Hastad.hashtad import *
+    from attacks.Hastad.hashtad import hastad_unpadded
     if len(ct_list)!=len(mod_list):
         if len(ct_list)!=3:
             raise Exception("Incorrect Parameteres, Parameters Required (ct_list,mod_list)")
