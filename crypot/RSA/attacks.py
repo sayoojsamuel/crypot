@@ -150,26 +150,23 @@ def neca():
 
 
 
-def factordb(para):
+def factordb(n, debug=False):
     """
     Api for factor db call
 
     """
     import requests
     try:
-    	a=requests.get("http://factordb.com/api", params={"query": str(p)}).json()
-    	fac = a['factors']
-    	if a["id"]=='C':
-            return 0
-    	for i in range(len(fac)):
-            fac[i][0]=int(fac[i][0])
-        k=[]
-        for i in fac:
-            k+=[i[0]]*i[1]
-        return k
-    except:
-    	print "No Internet Connection"
-    	return None
+    	response=requests.get("http://factordb.com/api", params={"query": str(n)}).json()
+    	if debug: print response
+        fac = response['factors']
+    	if response["id"]=='C':
+            raise ValueError("Factors for this Composite number is not known!")
+    	if not fac: return []
+        ml = [[int(prime)]*count for prime,count in fac]
+        return [y for x in ml for y in x]
+    except Exception as e:
+       	raise ValueError(e.msg, e.args)
  
 
 def fermat():

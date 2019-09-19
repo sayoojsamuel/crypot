@@ -2,9 +2,11 @@ from Crypto.Util.number import *
 from gmpy2 import *
 from Crypto.PublicKey import RSA
  
+class ElementMissingError(Exception):
+    pass
 
 #TODO:
-class RSA(object):
+class RSA():
     def __init__(self, **kwargs):
         input_set = set(kwargs.keys())
         public_set = set(('n','e'))
@@ -14,7 +16,7 @@ class RSA(object):
     # Set the individual properties 
     @property
     def n(self):
-        if not self.n
+        if not self.n: raise ElementMissingError("N is missing!")
         return int(self.n)
 
     @property
@@ -43,7 +45,7 @@ class RSA(object):
 
     @property
     def phi(self):
-        if not self.phi
+        if not self.phi: raise ElementMissingError("phi is missing!")
         return int(self.phi)
     
     def has_private(self):
@@ -109,62 +111,21 @@ class RSA(object):
         else:
             raise Exception("Require d and e to recover the primes")
     
-    def factlass RSAanalyse:
+#it as soon as possible, Its just a wrapper to call the factor attacks
+#        passlass RSAanalyse:
+class RSAanalyse(object):
     def __init__(self,RSA):
         self.attendance={}
         
     
     def analyse(self):
-        nsize = size(n)
-        esize = size(e)
-
-
-        if slass RSAanalyse:
-    def __init__(self,RSA):
-        self.attendance={}
-        
-    
-    def analyse(self):
-        nsize = size(n)
-        esize = size(e)
-
-
-            lass RSAanalyse:
-    def __init__(self,RSA):
-        self.attendance={}
-        
-    
-    def analyse(self):
-        nsize = size(n)
-        esize = size(e)
-
-it as soon as possible, Its just a wrapper to call the factor attacks
-        passlass RSAanalyse:
-    def __init__(self,RSA):
-        self.attendance={}
-        
-    
-    def analyse(self):
-        nsize = size(n)
-        esize = size(e)
+        nsize = size(self.n)
+        esize = size(self.e)
 
 
     
     def _factor_attack(n):
         pass
-
-            
-
-        
-    
-class RSAanalyse:
-    def __init__(self,RSA):
-        self.attendance={}
-        
-    
-    def analyse(self):
-        nsize = size(n)
-        esize = size(e)
 
 
 
