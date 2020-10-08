@@ -23,7 +23,7 @@ Add Makefile
 
 ```python
 from crypot import everything the you want
-# now f**king solve that damn challenge
+# now go solve that damn challenge
 # if you not able to solve the challenge, please see the contribution guidelines. It might help next time.
 # else if you are bored, create a feature request atlest and send us the code. :). Happy ending for a lazy you. 
 sys.exit()
@@ -32,10 +32,6 @@ sys.exit()
 ## Requirements
 
 SageMath
-
-## Contribution
-
-You can not even see this message, lol. Sorry, but its not opensource now! (The below License is just to fool you)
 
 
 ## About
