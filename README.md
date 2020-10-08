@@ -37,14 +37,7 @@ SageMath
 
 You can not even see this message, lol. Sorry, but its not opensource now! (The below License is just to fool you)
 
-## Source for the Code
-The codes are graciously taken from almost all the open source projects available, without any guilt. Also the code may not be properly creditted to the respective author except for the small following section - the reason why this project should remain private.
-    Code Sources:
-        ValarDragon CTF tool
-        Ganapathy RSA tool
-        Hellman Xor tool
-        NccGroup featherduster
-        and more which I don't remember
+
 ## About
 
 Author: Team bi0s
