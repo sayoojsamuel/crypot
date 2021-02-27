@@ -38,5 +38,5 @@ SageMath
 
 Author: Team bi0s
 License: MIT License [](https://opensource.org/licenses/MIT)
-Now that you are a fool, you can continue. If you are stuck somewhere, read the contributions:
+
 
