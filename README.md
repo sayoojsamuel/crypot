@@ -23,7 +23,7 @@ Add Makefile
 
 ```python
 from crypot import everything the you want
-# now f**king solve that damn challenge
+# now go solve that damn challenge
 # if you not able to solve the challenge, please see the contribution guidelines. It might help next time.
 # else if you are bored, create a feature request atlest and send us the code. :). Happy ending for a lazy you. 
 sys.exit()
@@ -33,20 +33,9 @@ sys.exit()
 
 SageMath
 
-## Contribution
 
-You can not even see this message, lol. Sorry, but its not opensource now! (The below License is just to fool you)
-
-## Source for the Code
-The codes are graciously taken from almost all the open source projects available, without any guilt. Also the code may not be properly creditted to the respective author except for the small following section - the reason why this project should remain private.
-    Code Sources:
-        ValarDragon CTF tool
-        Ganapathy RSA tool
-        Hellman Xor tool
-        NccGroup featherduster
-        and more which I don't remember
 ## About
 
 Author: Team bi0s
 License: MIT License [](https://opensource.org/licenses/MIT)
-Now that you are a fool, you can continue. If you are stuck somewhere, read the contributions:
+
