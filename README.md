@@ -1,6 +1,6 @@
 # crypot
 
-A python module of complex cryption functions. This is a compilaton of commonly, and less frequently used funtions, exploits and attacks. 
+A python module of complex cryption functions. This is a compilaton of commonly, and less frequently used functions, exploits and attacks. 
 Some modules depend heavily on SageMath, unless it is also implemented in python.  Suggests the install of SageMath for better performance.
 
 Some functions and/or exploits will be available with out-of-the-box-tweaks. Please follow the instructions to view and use them.
@@ -38,5 +38,4 @@ SageMath
 
 Author: Team bi0s
 License: MIT License [](https://opensource.org/licenses/MIT)
-
 
